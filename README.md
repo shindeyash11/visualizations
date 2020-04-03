@@ -32,6 +32,17 @@ PNG image v2.1 belongs to this visualization project.
 # DEMOGRAPHIC REPRESENTATTON OF MASSACHUSETTS STATE
 #CHOROPLETH MAP, TREE-MAP, BAR CHART RACE (FLOURISH, DATAWRAPPER)
 
-
 Link: https://elk-silver-gkph.squarespace.com/ (password: northeastern)
 PNG images from v3.1 to v3.5 belongs to this visualization project.
+
+
+# EVOLUTION OF FARMERS' MARKET IN UNITED STATES
+#CHOROPLETH MAP, TREE-MAP, BAR CHART, STACKED BAR CHAR, PIE CHART (R)
+
+Description: The following report consist evolution of farmers’ market in the United States. A farmer market is a public and recurring assembly of farmers’ or their representatives selling the food that they produced directly to consumers. Farmers’ markets facilitate personal connections and bonds of mutual benefits between farmers’, shoppers, and communities.
+
+.rmd file is posted for this project where all the codes are marked down.
+Report is also uploaded in PDF format.
+
+Thanks
+
