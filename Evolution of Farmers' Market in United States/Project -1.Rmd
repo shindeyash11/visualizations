@@ -1,0 +1,136 @@
+
+
+```{r}
+#Count of farmer markets using regions in the United States
+
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+fmarket <- read.csv("C:/Users/shind/Downloads/fmarket.csv")
+
+a1<- data.frame(state= state.name, region= state.region)
+a1
+a2<- inner_join(fmarket,a1, by= c("State"= "state"))
+a2
+a3<-a2%>% 
+  group_by(region)%>%
+  summarise(Count=n())
+a3
+#Plotting No. of markets according to the region given in R library for United States
+
+ggplot(data=a3,aes(x=region,y= Count)) +
+ggtitle("Distribution of Farmers market over major regions in The United States")+
+geom_bar(stat="identity", fill="SteelBlue")+ coord_flip()+
+  scale_fill_brewer(palette="Paired")+
+  theme_minimal()+
+geom_text(aes(label=Count), vjust=0.2, hjust = 1.2, color="white", size=3.5  )
+
+```
+
+
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(treemapify)
+
+#Filtering wine consumption across the country and identifying the top 10 states with the highest wine stock from farmers market
+df <- fmarket %>%
+  filter(Wine == "Y") %>%
+  group_by(State) %>%
+  summarise(unique_statenames=n()) %>%
+  top_n(unique_statenames, n=10)
+
+#Plotting tree map for the top 10 highest states with wine stock in farmers market 
+  ggplot(df, aes(area = unique_statenames, fill = State, label = unique_statenames)) +
+  geom_treemap() + geom_treemap_text() +ggtitle("Top 10 wine stock units in farmers market")
+
+```
+```{r}
+library(dplyr)
+#Analysing different payments methods across the farmers market
+payment <- fmarket
+payment_methods <- payment[,c(24,25,26,27,28)]
+
+payment_methods$Credit<- ifelse(payment_methods$Credit=="Y", 1, 0)
+payment_methods$WIC <- ifelse(payment_methods$WIC=="Y", 1, 0)
+payment_methods$WICcash <- ifelse(payment_methods$WICcash=="Y", 1, 0)
+payment_methods$SFMNP <-ifelse(payment_methods$SFMNP=="Y", 1, 0)
+payment_methods$SNAP <-ifelse(payment_methods$SNAP=="Y", 1, 0)
+
+payments1 <- colSums(payment_methods, na.rm = FALSE, dims = 1)
+payments2 <- (payments1/8788)
+
+pie(payments2, col = blues9, radius = 0.9, main = "Payment mode analysis") 
+```
+```{r}
+library(reshape2)
+product_mix <- a2
+#Categorising different product mixes
+#Choosing dairy and eggs as one product mix
+dairy_and_eggs <- product_mix [, c(60,31,34)] 
+count_dairy <- dairy_and_eggs %>%
+  filter(Cheese == "Y" | Eggs == "Y") %>%
+  group_by(region) %>%
+  summarise(product1=n()) 
+
+#Choosing organic, vegetables, maple, nuts, herbs, mushrooms, grains, fruits, beans, flowers and harvested as the produce product mix
+produce <- product_mix [, c(60,29,37,40,43,36,55,53,52,51,33,58)]
+count_produce <- produce %>%
+  filter(Organic == "Y" | Vegetables == "Y" | Maple == "Y" | Nuts == "Y" | Herbs == "Y" |
+         Mushrooms == "Y" | Grains == "Y" | Fruits == "Y" |Beans == "Y" | Flowers == "Y" |                   WildHarvested == "Y") %>%
+  group_by(region) %>%
+  summarise(product2=n())
+
+#Choosing seafood, meat, poutry as the meat and poultry product mix
+meat_and_poultry <- product_mix [, c(60,35,41,45)]
+count_meat <- meat_and_poultry %>%
+  filter(Seafood == "Y" | Meat == "Y" | Poultry == "Y") %>%
+  group_by(region) %>%
+  summarise(product3=n())
+
+#Choosing wine, coffee and juices as the beverages product mix
+beverages <- product_mix [, c(60,49,50,54)]
+count_beverages <- beverages %>%
+  filter(Wine == "Y" | Coffee == "Y" | Juices == "Y") %>%
+  group_by(region) %>%
+  summarise(product4=n())
+
+#choosing petfood, trees, soap, prepared, plants, nursery, honey, jams, crafts, bakedgoods and tofu as the last product mix
+others <- product_mix [, c(60,56,48,47,46,44,42,38,39,32,57,30)]
+count_others <- others %>%
+  filter(PetFood == "Y" | Trees == "Y" | Soap == "Y" | Prepared == "Y" | Plants == "Y" |
+         Nursery == "Y" | Honey == "Y" | Jams == "Y" | Crafts == "Y" | Bakedgoods == "Y" | 
+         Tofu == "Y") %>%
+  group_by(region) %>%
+  summarise(product5=n())
+
+#taking the inner join and merging all the categories
+merge1 <- merge(count_dairy,count_produce, by= 'region')
+merge2 <- merge(merge1,count_meat, by='region')
+merge3 <- merge(merge2,count_beverages, by= 'region')
+merge4 <- merge(merge3,count_others, by= 'region')
+
+#Using melt function to get to the stacked bar plot
+merge5 <- melt(merge4[,c("region","product1","product2","product3","product4","product5")],id.vars = 1)
+
+#Using ggplot to get the stacked bar graph
+ggplot(merge5, aes(x = reorder(region,value), y = value)) + geom_bar(aes(fill = variable),stat = "identity")  +coord_flip() + ggtitle("Analysis of product mixes across US states") +xlab("Count") +ylab("States")
+
+```
+```{r}
+library(dplyr)
+library(ggplot2)
+library(treemapify)
+
+#Filtering wine consumption across the country and identifying the top 10 states with the highest wine stock from farmers market
+df <- a2 %>%
+  filter(Wine == "Y") %>%
+  group_by(region) %>%
+  summarise(unique_statenames=n()) %>%
+  top_n(unique_statenames, n=10)
+
+#Plotting tree map for the top 10 highest states with wine stock in farmers market 
+  ggplot(df, aes(area = unique_statenames, fill = region, label = unique_statenames)) +
+  geom_treemap() + geom_treemap_text() +ggtitle("Regional wine stock units in farmers market")    
+```
