@@ -2,6 +2,7 @@
 This repository consists of majority of my visualization projects designed using Tableau, Flourish, R, and Datawrapper
 
 # Visualizations for Acquisition by Microsoft Corp.
+#SCATTER PLOT, TREE DIAGRAM, BAR CHART, TABLE (FLOURISH, DATAWRAPPER)
 
 First web consists of Microsoft's Company Acquisition history visualizations. I have taken data from Wikipedia.
 
@@ -13,7 +14,9 @@ All the visualuzations are embedded in a Wix web. Link: https://shindeyash011.wi
 PNG images from v1.1 to v1.7 belongs to this visualization project.
 
 
-# COVID-19 BAR CHART RACE VISUALIZATION #
+# COVID-19 BAR CHART RACE VISUALIZATION
+#BAR CHART RACE (FLOURISH)
+
 Following link contains dynamic bar chart race of Global COVID-19 outbreak (Except China) from 1/22/20120 to 3/3/2020.
 This project is carried out using Flourish Data Visualization Tool.
 
@@ -24,3 +27,11 @@ Data Source: https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases
 
 Visualization Link: https://public.flourish.studio/visualisation/1784365/
 PNG image v2.1 belongs to this visualization project.
+
+
+# DEMOGRAPHIC REPRESENTATTON OF MASSACHUSETTS STATE
+#CHOROPLETH MAP, TREE-MAP, BAR CHART RACE (FLOURISH, DATAWRAPPER)
+
+
+Link: https://elk-silver-gkph.squarespace.com/ (password: northeastern)
+PNG images from v3.1 to v3.5 belongs to this visualization project.
