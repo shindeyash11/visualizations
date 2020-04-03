@@ -1,7 +1,7 @@
 # visualizations
+This repository consists of majority of my visualization projects designed using Tableau, Flourish, R, and Datawrapper
 
 # Visualizations for Acquisition by Microsoft Corp.
-This repository consists of majority of my visualizations projects designed using Tableau, Flourish, R, and Datawrapper
 
 First web consists of Microsoft's Company Acquisition history visualizations. I have taken data from Wikipedia.
 
@@ -12,3 +12,7 @@ All the visualuzations are embedded in a Wix web. Link: https://shindeyash011.wi
 PNG images from v1.1 to v1.7 belongs to this visualization project.
 
 
+
+# COVID-19 BAR CHART RACE #
+
+Lo\ink: https://public.flourish.studio/visualisation/1474806/
