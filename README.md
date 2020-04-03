@@ -1,5 +1,5 @@
 # VISUALIZATIONS
-This repository consists of majority of my visualization projects designed using Tableau, Flourish, R, and Datawrapper
+This repository consists majority of my visualization projects designed using Tableau, Flourish, R, and Datawrapper
 
 # VISUALIZATION FOR ACQUISITION BY MICROSOFT CORP.
 #SCATTER PLOT, TREE DIAGRAM, BAR CHART, TABLE (FLOURISH, DATAWRAPPER)
