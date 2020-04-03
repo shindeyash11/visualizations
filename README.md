@@ -1,4 +1,6 @@
 # visualizations
+
+# Visualizations for Acquisition by Microsoft Corp.
 This repository consists of majority of my visualizations projects designed using Tableau, Flourish, R, and Datawrapper
 
 First web consists of Microsoft's Company Acquisition history visualizations. I have taken data from Wikipedia.
