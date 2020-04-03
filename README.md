@@ -1,7 +1,7 @@
-# visualizations
+# VISUALIZATIONS
 This repository consists of majority of my visualization projects designed using Tableau, Flourish, R, and Datawrapper
 
-# Visualizations for Acquisition by Microsoft Corp.
+# VISUALIZATION FOR ACQUISITION BY MICROSOFT CORP.
 #SCATTER PLOT, TREE DIAGRAM, BAR CHART, TABLE (FLOURISH, DATAWRAPPER)
 
 First web consists of Microsoft's Company Acquisition history visualizations. I have taken data from Wikipedia.
