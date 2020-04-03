@@ -7,6 +7,6 @@ Content: The attributes include the date, year, month of the acquisition, name o
 
 Source: https://en.wikipedia.org/wiki/List_of_mergers_and_acquisitions_by_Alphabet/Microsoft
 All the visualuzations are embedded in a Wix web. Link: https://shindeyash011.wixsite.com/microsoft-acq
-
+PNG images from v1.1 to v1.7 belongs to this visualization project.
 
 
