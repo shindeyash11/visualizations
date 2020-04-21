@@ -44,7 +44,7 @@ Description: The following report consist evolution of farmers’ market in the 
 .rmd file is posted for this project where all the codes are marked down.
 Report is also uploaded in PDF format.
 
-# Indicators of Global Growth and Development
+# INDICATORS OF GLOBAL GROWTH AND DEVELOPMENT
 #CHOROPLETH MAP, TREE-MAP, BAR CHART, STACKED BAR CHAR (Tableau)
 
 Desription: This project consists of global growth parameters in various fields such as birth rate, economy, internet usage, mobile phone uage etc.
