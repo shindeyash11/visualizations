@@ -37,12 +37,21 @@ PNG images from v3.1 to v3.5 belongs to this visualization project.
 
 
 # EVOLUTION OF FARMERS' MARKET IN UNITED STATES
-#CHOROPLETH MAP, TREE-MAP, BAR CHART, STACKED BAR CHAR, PIE CHART (R)
+#CHOROPLETH MAP, TREE-MAP, BAR CHART, STACKED BAR CHART, PIE CHART (R)
 
 Description: The following report consist evolution of farmers’ market in the United States. A farmer market is a public and recurring assembly of farmers’ or their representatives selling the food that they produced directly to consumers. Farmers’ markets facilitate personal connections and bonds of mutual benefits between farmers’, shoppers, and communities.
 
 .rmd file is posted for this project where all the codes are marked down.
 Report is also uploaded in PDF format.
+
+# Indicators of Global Growth and Development
+#CHOROPLETH MAP, TREE-MAP, BAR CHART, STACKED BAR CHAR (Tableau)
+
+Desription: This project consists of global growth parameters in various fields such as birth rate, economy, internet usage, mobile phone uage etc.
+
+.twbx file is posted for this project where all the codes are marked down.
+Report is also uploaded in powerpoint format.
+
 
 Thanks
 
